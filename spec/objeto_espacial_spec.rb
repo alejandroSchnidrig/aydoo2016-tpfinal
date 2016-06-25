@@ -19,5 +19,10 @@ describe 'objeto_espacial' do
     expect(objeto_espacial.esta_vivo).to eq(true)
   end
 
+  it 'deberia ser 150 la vida al setearse nuevamente' do
+    objeto_espacial = ObjetoEspacial.new
+    objeto_espacial.vida=150
+    expect(objeto_espacial.vida).to eq(150)
+  end
 
 end
