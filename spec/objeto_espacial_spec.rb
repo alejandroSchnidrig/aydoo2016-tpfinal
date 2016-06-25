@@ -25,4 +25,10 @@ describe 'objeto_espacial' do
     expect(objeto_espacial.vida).to eq(150)
   end
 
+  it 'deberia ser 150 la masa al setearse nuevamente' do
+    objeto_espacial = ObjetoEspacial.new
+    objeto_espacial.masa=150
+    expect(objeto_espacial.masa).to eq(150)
+  end
+  
 end
