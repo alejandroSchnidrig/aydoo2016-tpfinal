@@ -25,4 +25,10 @@ describe 'misil' do
     expect(misil.vida).to eq(150)
   end
 
+  it 'deberia ser 150 la masa al setearse nuevamente' do
+    misil = Misil.new
+    misil.masa=150
+    expect(misil.masa).to eq(150)
+  end
+
 end
