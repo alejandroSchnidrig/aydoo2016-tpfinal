@@ -10,7 +10,7 @@ class ObjetoEspacial
   end
 
   def vida=(vida)
-    if(vida < 0)
+    if(vida <= 0)
       @vida = 0
       @esta_vivo = false
     elsif
@@ -19,7 +19,7 @@ class ObjetoEspacial
   end
 
   def masa=(masa)
-    if(masa < 0)
+    if(masa <= 0)
       @masa = 0
       @esta_vivo = false
     elsif
