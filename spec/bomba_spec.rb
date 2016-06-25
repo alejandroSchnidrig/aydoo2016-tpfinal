@@ -25,4 +25,10 @@ describe 'bomba' do
     expect(bomba.vida).to eq(150)
   end
 
+  it 'deberia ser 150 la masa al setearse nuevamente' do
+    bomba = Bomba.new
+    bomba.masa=150
+    expect(bomba.masa).to eq(150)
+  end
+
 end
