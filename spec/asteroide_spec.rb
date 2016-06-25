@@ -42,6 +42,11 @@ describe 'asteroide' do
     asteroide.masa=-100
     expect(asteroide.masa).to eq(0)
   end
- 
+
+  it 'deberia estar muerto si se setea una vida negativa o cero' do
+    asteroide = Asteroide.new
+    asteroide.vida=-100
+    expect(asteroide.esta_vivo).to eq(false)
+  end 
 
 end
