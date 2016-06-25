@@ -37,4 +37,10 @@ describe 'nave' do
     expect(nave.vida).to eq(0)
   end
 
+  it 'deberia ser 0 la masa al querer setearle un numero negativo' do
+    nave = Nave.new
+    nave.masa=-100
+    expect(nave.masa).to eq(0)
+  end
+
 end

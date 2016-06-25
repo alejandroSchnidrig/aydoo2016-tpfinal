@@ -12,8 +12,18 @@ class Nave
   def vida=(vida)
     if(vida < 0)
       @vida = 0
+      @esta_vivo = false
     elsif
       @vida = vida
+    end
+  end
+
+  def masa=(masa)
+    if(masa < 0)
+      @masa = 0
+      @esta_vivo = false
+    elsif 
+      @masa = masa
     end
   end
 
