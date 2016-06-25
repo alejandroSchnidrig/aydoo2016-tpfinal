@@ -31,4 +31,10 @@ describe 'misil' do
     expect(misil.masa).to eq(150)
   end
 
+  it 'deberia ser 0 la vida al querer setearle un numero negativo' do
+    misil = Misil.new
+    misil.vida=-100
+    expect(misil.vida).to eq(0)
+  end
+
 end
