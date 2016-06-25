@@ -1,4 +1,6 @@
-require 'rspec' 
+require 'rspec'
+require 'spec_helper'
+ 
 require_relative '../model/foo'
 
 describe 'Foo' do
