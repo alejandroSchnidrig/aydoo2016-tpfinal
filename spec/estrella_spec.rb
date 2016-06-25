@@ -14,4 +14,9 @@ describe 'estrella' do
     expect(estrella.masa).to eq(100)
   end
 
+  it 'deberia estar vivo al momento de su creacion' do
+    estrella = Estrella.new
+    expect(estrella.esta_vivo).to eq(true)
+  end
+
 end
