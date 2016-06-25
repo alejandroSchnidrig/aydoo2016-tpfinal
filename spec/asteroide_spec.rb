@@ -14,4 +14,9 @@ describe 'asteroide' do
     expect(asteroide.masa).to eq(100)
   end
 
+  it 'deberia estar vivo al momento de su creacion' do
+    asteroide = Asteroide.new
+    expect(asteroide.esta_vivo).to eq(true)
+  end
+
 end
