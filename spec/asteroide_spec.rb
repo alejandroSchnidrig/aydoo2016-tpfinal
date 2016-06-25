@@ -30,6 +30,11 @@ describe 'asteroide' do
     asteroide.masa=150
     expect(asteroide.masa).to eq(150)
   end
- 
+
+  it 'deberia ser 0 la vida al querer setearle un numero negativo' do
+    asteroide = Asteroide.new
+    asteroide.vida=-100
+    expect(asteroide.vida).to eq(0)
+  end 
 
 end
