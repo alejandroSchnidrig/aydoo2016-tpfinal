@@ -19,4 +19,10 @@ describe 'estrella' do
     expect(estrella.esta_vivo).to eq(true)
   end
 
+  it 'deberia ser 150 la vida al setearse nuevamente' do
+    estrella = Estrella.new
+    estrella.vida=150
+    expect(estrella.vida).to eq(150)
+  end  
+
 end
