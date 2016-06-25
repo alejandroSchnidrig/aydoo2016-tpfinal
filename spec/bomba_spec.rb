@@ -31,4 +31,10 @@ describe 'bomba' do
     expect(bomba.masa).to eq(150)
   end
 
+  it 'deberia ser 0 la vida al querer setearle un numero negativo' do
+    bomba = Bomba.new
+    bomba.vida=-100
+    expect(bomba.vida).to eq(0)
+  end
+
 end
