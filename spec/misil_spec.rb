@@ -14,4 +14,9 @@ describe 'misil' do
     expect(misil.masa).to eq(100)
   end
 
+  it 'deberia estar vivo al momento de su creacion' do
+    misil = Misil.new
+    expect(misil.esta_vivo).to eq(true)
+  end
+
 end
