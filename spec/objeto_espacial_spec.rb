@@ -48,5 +48,11 @@ describe 'objeto_espacial' do
     objeto_espacial.vida=-100
     expect(objeto_espacial.esta_vivo).to eq(false)
   end
+
+  it 'deberia estar muerto si se setea una masa negativa o cero' do
+    objeto_espacial = ObjetoEspacial.new
+    objeto_espacial.masa=-100
+    expect(objeto_espacial.esta_vivo).to eq(false)
+  end
   
 end
