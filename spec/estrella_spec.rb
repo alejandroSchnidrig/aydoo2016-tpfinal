@@ -25,4 +25,10 @@ describe 'estrella' do
     expect(estrella.vida).to eq(150)
   end  
 
+  it 'deberia ser 150 la masa al setearse nuevamente' do
+    estrella = Estrella.new
+    estrella.masa=150
+    expect(estrella.masa).to eq(150)
+  end
+
 end
