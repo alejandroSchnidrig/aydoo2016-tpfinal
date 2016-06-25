@@ -30,5 +30,11 @@ describe 'objeto_espacial' do
     objeto_espacial.masa=150
     expect(objeto_espacial.masa).to eq(150)
   end
+
+  it 'deberia ser 0 la vida al querer setearle un numero negativo' do
+    objeto_espacial = ObjetoEspacial.new
+    objeto_espacial.vida=-100
+    expect(objeto_espacial.vida).to eq(0)
+  end
   
 end
