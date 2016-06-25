@@ -19,4 +19,10 @@ describe 'misil' do
     expect(misil.esta_vivo).to eq(true)
   end
 
+  it 'deberia ser 150 la vida al setearse nuevamente' do
+    misil = Misil.new
+    misil.vida=150
+    expect(misil.vida).to eq(150)
+  end
+
 end
