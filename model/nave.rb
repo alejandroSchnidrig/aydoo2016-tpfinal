@@ -9,4 +9,12 @@ class Nave
     @esta_vivo = true
   end
 
+  def vida=(vida)
+    if(vida < 0)
+      @vida = 0
+    elsif
+      @vida = vida
+    end
+  end
+
 end
