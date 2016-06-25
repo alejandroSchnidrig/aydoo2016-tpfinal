@@ -19,10 +19,16 @@ describe 'nave' do
     expect(nave.esta_vivo).to eq(true)
   end
 
-  it 'deberia ser 150 la vida al setearse nuevamanete' do
+  it 'deberia ser 150 la vida al setearse nuevamente' do
     nave = Nave.new
     nave.vida=150
     expect(nave.vida).to eq(150)
+  end
+
+  it 'deberia ser 150 la masa al setearse nuevamente' do
+    nave = Nave.new
+    nave.masa=150
+    expect(nave.masa).to eq(150)
   end
 
 end
