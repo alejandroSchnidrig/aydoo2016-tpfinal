@@ -49,4 +49,10 @@ describe 'misil' do
     expect(misil.esta_vivo).to eq(false)
   end
 
+  it 'deberia estar muerto si se setea una masa negativa o cero' do
+    misil = Misil.new
+    misil.masa=-100
+    expect(misil.esta_vivo).to eq(false)
+  end
+
 end
