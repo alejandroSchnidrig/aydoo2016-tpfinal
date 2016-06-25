@@ -14,5 +14,10 @@ describe 'objeto_espacial' do
     expect(objeto_espacial.masa).to eq(100)
   end
 
+  it 'deberia estar vivo al momento de su creacion' do
+    objeto_espacial = ObjetoEspacial.new
+    expect(objeto_espacial.esta_vivo).to eq(true)
+  end
+
 
 end
