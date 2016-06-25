@@ -14,4 +14,10 @@ describe 'nave' do
     expect(nave.masa).to eq(100)
   end
 
+  it 'deberia estar vivo al momento de su creacion' do
+    nave = Nave.new
+    expect(nave.esta_vivo).to eq(true)
+  end
+
+
 end
