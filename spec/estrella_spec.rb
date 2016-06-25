@@ -37,4 +37,11 @@ describe 'estrella' do
     expect(estrella.vida).to eq(0)
   end
 
+  it 'deberia ser 0 la masa al querer setearle un numero negativo' do
+    estrella = Estrella.new
+    estrella.masa=-100
+    expect(estrella.masa).to eq(0)
+  end
+  
+
 end
