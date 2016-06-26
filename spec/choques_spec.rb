@@ -70,4 +70,20 @@ describe 'choques' do
     expect(asteroide.masa).to eq(100)
   end
 
+  it 'deberia quitarle el 50% de la vida de la bomba al chocar con un misil' do
+    misil = Misil.new
+    bomba = Bomba.new
+    choque = Choques.new
+    choque.choque(misil, bomba)
+    expect(bomba.vida).to eq (50)
+  end
+
+   it 'deberia quitarle el 100% de la vida de la bomba al chocar con una estrella' do
+    estrella = Estrella.new
+    bomba = Bomba.new
+    choque = Choques.new
+    choque.choque(bomba, estrella)
+    expect(bomba.vida).to eq (0)
+  end
+
 end
