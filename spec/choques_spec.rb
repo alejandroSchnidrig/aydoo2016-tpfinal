@@ -20,7 +20,7 @@ describe 'choques' do
     expect(otra_nave.vida).to eq(0)
   end
 
-  it 'deberia ser destruida una_nave por el choque' do
+  it 'deberia ser destruida una_nave por el choque con otra nave' do
     una_nave = Nave.new
     otra_nave = Nave.new
     choque = Choques.new
@@ -28,7 +28,7 @@ describe 'choques' do
     expect(una_nave.objeto_destruido?).to eq(true)
   end
 
-  it 'deberia ser destruida otra_nave por el choque' do
+  it 'deberia ser destruida otra_nave por el choque con otra nave' do
     una_nave = Nave.new
     otra_nave = Nave.new
     choque = Choques.new
@@ -52,7 +52,7 @@ describe 'choques' do
     expect(asteroide.masa).to eq(110)
   end
 
-  it 'deberia ser nulo los efectos de choque para ambos objetos espaciales' do
+  it 'deberia ser nulo los efectos del choque en la vida de un mision con un asteroide' do
     misil = Misil.new
     asteroide = Asteroide.new
     choque = Choques.new
@@ -60,5 +60,14 @@ describe 'choques' do
     expect(misil.vida).to eq(100)
     expect(asteroide.vida).to eq(100)
   end 
- 
+
+  it 'deberia ser nulo los efectos del choque en la masa de un mision con un asteroide' do
+    misil = Misil.new
+    asteroide = Asteroide.new
+    choque = Choques.new
+    choque.choque(misil, asteroide)
+    expect(misil.masa).to eq(100)
+    expect(asteroide.masa).to eq(100)
+  end
+
 end
