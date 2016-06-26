@@ -13,9 +13,16 @@ describe 'efecto_masa' do
    efecto = EfectoMasa.new(-50)
    nave = Nave.new
    asteroide = Asteroide.new
-   asteroide.masa=50
    efecto.aplicar_efecto(nave, asteroide)
-   expect(nave.masa).to eq(75)
+   expect(nave.masa).to eq(50)
+  end
+  
+   it 'deberia modificar la masa del asteroide al chocar con una nave correctemente' do
+   efecto = EfectoMasa.new(10)
+   nave = Nave.new
+   asteroide = Asteroide.new
+   efecto.aplicar_efecto(asteroide, nave)
+   expect(asteroide.masa).to eq(110)
   end
 
 end
