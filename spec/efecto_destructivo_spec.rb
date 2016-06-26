@@ -9,4 +9,11 @@ describe 'efecto_destructivo' do
     expect(efecto.valor).to eq(100)
   end
 
+  it 'deberia quitarle vida a una nave correctamente' do
+    efecto = EfectoDestructivo.new(50)
+    nave = Nave.new
+    efecto.aplicar_efecto(nave, nil)
+    expect(nave.vida).to eq(50)
+  end
+
 end
