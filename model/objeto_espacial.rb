@@ -7,6 +7,7 @@ class ObjetoEspacial
     @vida = vida
     @masa = masa
     @esta_vivo = true
+    @efectos = Hash.new
   end
 
   def vida=(vida)
@@ -29,6 +30,10 @@ class ObjetoEspacial
 
   def objeto_destruido?
     return (vida <= 0) || (masa <= 0)
+  end
+
+  def choca_con(objeto_espacial)
+    @efectos.fetch(objeto_espacial.class).aplicar_efecto(self, objeto_espacial)
   end
 
 end
