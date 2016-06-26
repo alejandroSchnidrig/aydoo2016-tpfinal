@@ -27,4 +27,8 @@ class ObjetoEspacial
     end
   end
 
+  def objeto_destruido?
+    return (vida <= 0) || (masa <= 0)
+  end
+
 end
