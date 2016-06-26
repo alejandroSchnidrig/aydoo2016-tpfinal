@@ -51,5 +51,14 @@ describe 'choques' do
     choque.choque(nave, asteroide)
     expect(asteroide.masa).to eq(110)
   end
-  
+
+  it 'deberia ser nulo los efectos de choque para ambos objetos espaciales' do
+    misil = Misil.new
+    asteroide = Asteroide.new
+    choque = Choques.new
+    choque.choque(misil, asteroide)
+    expect(misil.vida).to eq(100)
+    expect(asteroide.vida).to eq(100)
+  end 
+ 
 end
