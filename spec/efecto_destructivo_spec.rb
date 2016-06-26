@@ -6,7 +6,7 @@ describe 'efecto_destructivo' do
 
   it 'deberia devolver su valor correctamente' do
     efecto = EfectoDestructivo.new(100)
-    expect(efecto.valor).to eq(100)
+    expect(efecto.vida).to eq(100)
   end
 
   it 'deberia quitarle vida a una nave correctamente' do
