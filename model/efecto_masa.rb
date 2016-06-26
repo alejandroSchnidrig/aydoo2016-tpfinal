@@ -1,5 +1,7 @@
 class EfectoMasa
 
+  attr_reader :masa
+
   def initialize(masa)
     @masa = masa
   end
