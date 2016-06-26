@@ -36,4 +36,12 @@ describe 'choques' do
     expect(otra_nave.objeto_destruido?).to eq(true)
   end
 
+  it 'deberia disminuir la masa de la nave al chocar con un asteroide' do
+    nave = Nave.new
+    asteroide = Asteroide.new
+    choque = Choques.new
+    choque.choque(nave, asteroide)
+    expect(nave.masa).to eq(50)
+  end
+
 end
