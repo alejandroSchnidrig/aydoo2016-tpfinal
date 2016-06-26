@@ -16,4 +16,12 @@ describe 'efecto_destructivo' do
     expect(nave.vida).to eq(50)
   end
 
+  it 'deberia quitarle misil a una nave correctamente' do
+    efecto = EfectoDestructivo.new(40)
+    misil = Misil.new
+    efecto.aplicar_efecto(misil, nil)
+    expect(misil.vida).to eq(60)
+  end
+
+
 end
