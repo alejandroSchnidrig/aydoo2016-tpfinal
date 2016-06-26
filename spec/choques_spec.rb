@@ -28,5 +28,12 @@ describe 'choques' do
     expect(una_nave.objeto_destruido?).to eq(true)
   end
 
+  it 'deberia ser destruida otra_nave por el choque' do
+    una_nave = Nave.new
+    otra_nave = Nave.new
+    choque = Choques.new
+    choque.choque(una_nave, otra_nave)
+    expect(otra_nave.objeto_destruido?).to eq(true)
+  end
 
 end
