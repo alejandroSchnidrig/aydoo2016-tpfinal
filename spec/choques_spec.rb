@@ -86,4 +86,21 @@ describe 'choques' do
     expect(bomba.vida).to eq (0)
   end
 
+  it 'deberia quitarle 80 puntos de vida a la nave al chocar con un misil' do
+    nave = Nave.new
+    misil = Misil. new
+    choque = Choques.new
+    choque.choque(nave, misil)
+    expect(nave.vida).to eq(20)
+  end
+
+  it 'deberia quitarle 100 puntos de vida al misil al chocar con una nave' do
+    nave = Nave.new
+    misil = Misil. new
+    choque = Choques.new
+    choque.choque(nave, misil)
+    expect(misil.vida).to eq(0)
+  end
+
+
 end
