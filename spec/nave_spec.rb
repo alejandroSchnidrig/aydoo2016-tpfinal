@@ -16,7 +16,7 @@ describe 'nave' do
 
   it 'deberia estar vivo al momento de su creacion' do
     nave = Nave.new(100,100)
-    expect(nave.esta_vivo).to eq(true)
+    expect(nave.objeto_destruido?).to eq(false)
   end
 
   it 'deberia ser 150 la vida al setearse nuevamente' do

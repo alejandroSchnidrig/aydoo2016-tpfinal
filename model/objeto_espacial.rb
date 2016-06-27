@@ -10,7 +10,6 @@ class ObjetoEspacial
     validar_masa(masa)
     @vida = vida
     @masa = masa
-    @esta_vivo = true
     @efectos = Hash.new
   end
 

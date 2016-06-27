@@ -16,7 +16,7 @@ describe 'bomba' do
 
   it 'deberia estar vivo al momento de su creacion' do
     bomba = Bomba.new(100,100)
-    expect(bomba.esta_vivo).to eq(true)
+    expect(bomba.objeto_destruido?).to eq(false)
   end
 
   it 'deberia ser 150 la vida al setearse nuevamente' do

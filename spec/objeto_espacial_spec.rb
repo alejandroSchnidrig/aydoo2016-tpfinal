@@ -16,7 +16,7 @@ describe 'objeto_espacial' do
 
   it 'deberia estar vivo al momento de su creacion' do
     objeto_espacial = ObjetoEspacial.new(100,100)
-    expect(objeto_espacial.esta_vivo).to eq(true)
+    expect(objeto_espacial.objeto_destruido?).to eq(false)
   end
 
   it 'deberia ser 150 la vida al setearse nuevamente' do

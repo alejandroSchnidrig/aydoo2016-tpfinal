@@ -16,7 +16,7 @@ describe 'misil' do
 
   it 'deberia estar vivo al momento de su creacion' do
     misil = Misil.new(100,100)
-    expect(misil.esta_vivo).to eq(true)
+    expect(misil.objeto_destruido?).to eq(false)
   end
 
   it 'deberia ser 150 la vida al setearse nuevamente' do
