@@ -73,9 +73,10 @@ describe 'choques' do
   it 'deberia quitarle el 50% de la vida de la bomba al chocar con un misil' do
     misil = Misil.new
     bomba = Bomba.new
+    bomba.vida=180
     choque = Choques.new
     choque.choque(misil, bomba)
-    expect(bomba.vida).to eq (50)
+    expect(bomba.vida).to eq (90)
   end
 
    it 'deberia quitarle el 100% de la vida de la bomba al chocar con una estrella' do
@@ -102,5 +103,22 @@ describe 'choques' do
     expect(misil.vida).to eq(0)
   end
 
+  it 'deberia agregarle la vida de la estrella a la nave al chocar' do
+    nave = Nave.new
+    estrella = Estrella. new
+    estrella.vida=150
+    choque = Choques.new
+    choque.choque(nave, estrella)
+    expect(nave.vida).to eq(250)
+  end
+
+  it 'deberia morir la estrella al chocar una nave' do
+    nave = Nave.new
+    estrella = Estrella. new
+    estrella.vida=150
+    choque = Choques.new
+    choque.choque(estrella, nave)
+    expect(estrella.vida).to eq(0)
+  end
 
 end

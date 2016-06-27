@@ -1,5 +1,6 @@
 require_relative '../model/objeto_espacial'
 require_relative '../model/efecto_destructivo'
+require_relative '../model/efecto_destructivo_por_porcentaje'
 require_relative '../model/misil'
 require_relative '../model/nave'
 require_relative '../model/asteroide'
@@ -11,9 +12,9 @@ class Bomba < ObjetoEspacial
     super
     @efectos = {
       Nave => EfectoDestructivo.new(100),
-      Misil => EfectoDestructivo.new(@vida/2),
+      Misil => EfectoDestructivoPorPorcentaje.new(50),
       Bomba => EfectoDestructivo.new(100),
-      Asteroide => EfectoDestructivo.new(@vida),
+      Asteroide => EfectoDestructivoPorPorcentaje.new(100),
       Estrella => EfectoDestructivo.new(100)
     }
   end
