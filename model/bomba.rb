@@ -8,7 +8,7 @@ require_relative '../model/estrella'
 
 class Bomba < ObjetoEspacial
 
-  def initialize(vida = 100, masa = 100)
+  def initialize(vida, masa)
     super
     @efectos = {
       Nave => EfectoDestructivo.new(100),

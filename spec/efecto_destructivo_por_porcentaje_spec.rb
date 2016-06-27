@@ -11,16 +11,16 @@ describe 'efecto_destructivo_por_porcentaje' do
 
   it 'deberia ser cero la vida de la estrella al chocar con una nave' do
     efecto = EfectoDestructivoPorPorcentaje.new(100)
-    nave = Nave.new
-    estrella = Estrella.new		
+    nave = Nave.new(100,100)
+    estrella = Estrella.new(100,100)		
     efecto.aplicar_efecto(estrella, nave)
     expect(estrella.vida).to eq(0)
   end
 
   it 'deberia destruir a la estrella al chocar con una nave' do
     efecto = EfectoDestructivoPorPorcentaje.new(100)
-    nave = Nave.new
-    estrella = Estrella.new
+    nave = Nave.new(100,100)
+    estrella = Estrella.new(100,100)
     efecto.aplicar_efecto(estrella, nave)
     expect(estrella.objeto_destruido?).to eq(true)
   end
