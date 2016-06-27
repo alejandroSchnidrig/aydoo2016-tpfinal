@@ -1,6 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 require_relative '../model/choques'
+require_relative '../model/objeto_destruido_error'
 
 describe 'choques' do
 
@@ -119,6 +120,14 @@ describe 'choques' do
     choque = Choques.new
     choque.choque(estrella, nave)
     expect(estrella.vida).to eq(0)
+  end
+
+  it 'deberia no poderse realizar un choque si unos de los objetos esta destruido' do
+    nave = Nave.new
+    misil = Misil.new
+    choque = Choques.new
+    nave.vida=0
+    expect{choque.choque(nave, misil)}.to raise_error(StandardError)
   end
 
 end
