@@ -30,5 +30,9 @@ describe 'estrella' do
     estrella.masa=150
     expect(estrella.masa).to eq(150)
   end
+
+  it 'deberia no poder crearse una estrella con una vida o masa negativa' do
+    expect{objeto = Estrella.new(-100,120)}.to raise_error(ArgumentError)
+  end
  
 end
