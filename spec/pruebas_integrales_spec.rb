@@ -41,4 +41,29 @@ describe 'prueba_integral' do
     expect(bomba_dos.masa).to eq(45)
   end
 
+  it 'una bomba choca con un asteroide' do
+    bomba = Bomba.new(200,100)
+    asteroide = Asteroide.new(30,100)
+    choque = Choques.new
+    choque.choque(bomba,asteroide)
+
+    expect(bomba.vida).to eq(0)
+    expect(bomba.masa).to eq(100)
+    expect(asteroide.vida).to eq(30)
+    expect(asteroide.masa).to eq(100)
+  end
+
+  it 'una nave choca con una estrella' do
+    nave = Nave.new(100,100)
+    estrella = Estrella.new(50,50)
+    choque = Choques.new
+    choque.choque(nave,estrella)
+
+    expect(nave.vida).to eq(150)
+    expect(nave.masa).to eq(100)
+    expect(estrella.vida).to eq(0)
+    expect(estrella.masa).to eq(50)
+  end
+
 end
+
