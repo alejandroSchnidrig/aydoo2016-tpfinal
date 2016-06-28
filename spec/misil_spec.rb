@@ -32,7 +32,8 @@ describe 'misil' do
   end
 
   it 'deberia no poder crearse un misil con una vida o masa negativa' do
-    expect{objeto = Misil.new(-100,120)}.to raise_error(ArgumentError)
+    misil = Misil.new(-100,80)
+    expect(misil.vida).to eq(0)
   end
 
 end

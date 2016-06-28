@@ -32,7 +32,8 @@ describe 'asteroide' do
   end
 
   it 'deberia no poder crearse un asteroide con una vida o masa negativa' do
-    expect{objeto = Asteroide.new(-100,120)}.to raise_error(ArgumentError)
+    asteroide = Asteroide.new(-100,80)
+    expect(asteroide.vida).to eq(0)
   end
 
 end

@@ -32,7 +32,8 @@ describe 'nave' do
   end
 
   it 'deberia no poder crearse una nave con una vida o masa negativa' do
-    expect{objeto = Nave.new(-100,120)}.to raise_error(ArgumentError)
+    nave = Nave.new(-100,80)
+    expect(nave.vida).to eq(0)
   end
 
 end

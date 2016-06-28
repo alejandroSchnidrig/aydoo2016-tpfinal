@@ -32,7 +32,8 @@ describe 'bomba' do
   end
 
   it 'deberia no poder crearse una bomba con una vida o masa negativa' do
-    expect{objeto = Bomba.new(-100,120)}.to raise_error(ArgumentError)
+    bomba = Bomba.new(-100,80)
+    expect(bomba.vida).to eq(0)
   end
 
 end

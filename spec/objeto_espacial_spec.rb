@@ -32,7 +32,8 @@ describe 'objeto_espacial' do
   end
   
   it 'deberia no poder crearse un objeto con una vida o masa negativa' do
-    expect{objeto = ObjetoEspacial.new(-100,120)}.to raise_error(ArgumentError)
+    objeto_espacial = ObjetoEspacial.new(100,-50)
+    expect(objeto_espacial.masa).to eq(0)
   end
 
 end
