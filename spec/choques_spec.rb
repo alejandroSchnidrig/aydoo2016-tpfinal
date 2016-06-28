@@ -6,7 +6,7 @@ require_relative '../model/objeto_destruido_error'
 describe 'choques' do
 
   it 'deberia quitarle 100 puntos de vida a una_nave que choca a otra_nave' do
-    una_nave = Nave.new(100,100) 
+    una_nave = Nave.new(15,10) 
     otra_nave = Nave.new(100,100)
     choque = Choques.new
     choque.choque(una_nave, otra_nave)

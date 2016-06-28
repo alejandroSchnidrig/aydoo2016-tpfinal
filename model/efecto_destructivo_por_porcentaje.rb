@@ -1,4 +1,6 @@
-class EfectoDestructivoPorPorcentaje 
+require_relative '../model/efecto' 
+
+class EfectoDestructivoPorPorcentaje < Efecto  
 
   attr_reader :vida
 

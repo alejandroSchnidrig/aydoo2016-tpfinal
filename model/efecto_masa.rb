@@ -1,4 +1,6 @@
-class EfectoMasa
+require_relative '../model/efecto'
+
+class EfectoMasa < Efecto 
 
   attr_reader :masa
 

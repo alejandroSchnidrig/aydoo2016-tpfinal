@@ -1,4 +1,6 @@
-class EfectoDestructivo 
+require_relative '../model/efecto'
+
+class EfectoDestructivo < Efecto 
 
   attr_reader :vida
 
