@@ -2,7 +2,7 @@ Revisor: Lucas Del Rio
 
 Observación 1: Falta modelar excepciones para ingreso de vida y masa menores a cero.
 Respuesta: Se toma en cuenta, en un principio decidi que el objeto creado inicie con vida y masa igual a 100 por default pero decidi cambiarlo ya que me parece mas "natural" que se puedan
-elegir los valores de la vida y masa  al crear el objeto. Se tiene en cuanta lo del ingreso de vida y masa menores a cero pero no con excepcines sino que con un metodo.
+elegir los valores de la vida y masa  al crear el objeto. Se tiene en cuenta lo del ingreso de vida y masa menores a cero pero no con excepcines sino que con un metodo.
 
 Observación 2: Inicializa vida y masa en objeto_espacial y en cada objeto con los mismos valores"
 Respuesta: Se toma en cuenta, se explica en la observacion 1.
