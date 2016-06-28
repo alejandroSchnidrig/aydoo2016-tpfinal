@@ -19,3 +19,5 @@ Decisiones de Diseño:
 .El metodo actualizar_atributos de la clase ObjetoEspacial provoca "smells" ya que si habria mas atributos que actualizar se produciria un cadena de if con la implementacion actual.
 
 .La clase efecto_nulo no tiene logica ni provoca efecto alguno sobre los ObjetosEspaciales pero la considero necesaria ya que forma parte del dominio.
+
+.La clase pruebas_integrales contiene pruebas con mas de un expect lo cual no es una buena practica pero se utilizan para comprobar los ejemplos dados en la consigna del trabajo pratico en su totalidad sin tener que repetir la misma prueba varias veces.
