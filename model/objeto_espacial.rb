@@ -1,7 +1,6 @@
 class ObjetoEspacial
  
   attr_accessor :vida, :masa
-  attr_reader :esta_vivo
 
   def initialize(vida, masa)
     @vida = vida

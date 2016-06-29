@@ -2,11 +2,6 @@ require_relative '../model/objeto_espacial'
 require_relative '../model/efecto_destructivo'
 require_relative '../model/efecto_masa'
 require_relative '../model/efecto_constructivo'
-require_relative '../model/misil'
-require_relative '../model/bomba'
-require_relative '../model/asteroide'
-require_relative '../model/estrella'
-
 
 class Nave < ObjetoEspacial
 
